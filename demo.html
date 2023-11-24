@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./layui.css">
+		<link rel="stylesheet" type="text/css" href="./demo.css" />
+	</head>
+	<body>
+		<div id="page">
+			<div id="left_content">
+				<div id="menu_box">
+					<div id="create_btn_group">
+						<button id="btn_point" type="button" class="layui-btn layui-btn-radius layui-btn-normal">点</button>
+						<button id="btn_line" type="button" class="layui-btn layui-btn-radius layui-btn-normal">线段</button>
+						<button id="btn_polygon" type="button" class="layui-btn layui-btn-radius layui-btn-normal">多边形</button>
+					</div>
+					<div id="color_box">
+						当前画笔：
+						<button id="color_cube" type="button" class="layui-btn layui-btn-disabled"> </button>
+						<input id="color_input" type="text" class="layui-input">
+						<button id="btn_color" type="button" class="layui-btn layui-btn-normal">设置</button>
+					</div>
+					<div class="layui-btn-group">
+						<button id="btn_image_layer" type="button" class="layui-btn layui-btn-normal">加载图片</button>
+						<button id="btn_save" type="button" class="layui-btn layui-btn-normal">导出</button>
+						<button id="btn_load" type="button" class="layui-btn layui-btn-normal">导入</button>
+						<input name="file" type="file" id="import" style="display: none;" />
+						<button id="btn_reset" type="button" class="layui-btn layui-btn-danger">重置</button>
+					</div>
+				</div>
+				<div id="piu_container"></div>
+				<div id="message_box">
+					<input id="message_shower" type="text" class="layui-input" disabled="disabled">
+				</div>
+			</div>
+			<div id="right_content" style="background-color: #f7f7f7;">
+				<div id="logo"></div>
+				<!-- 选中对象的属性表 -->
+				<fieldset id="right_table" class="layui-elem-field layui-field-title">
+					<legend>选中对象</legend>
+					<div class="layui-field-box">
+						<div class="layui-input-inline" style="width: 100%;">
+							<textarea id="ob_data" class="layui-textarea"></textarea>
+						</div>
+						<table class="layui-table">
+							<tbody>
+								<tr>
+									<td>颜色</td>
+									<td style="padding: 0;">
+										<input id="ob_color" type="text" class="layui-input">
+									</td>
+								</tr>
+								<tr>
+									<td>对象</td>
+									<td>
+										<button id="btn_ob_color" type="button" class="layui-btn layui-btn-normal layui-btn-xs">颜色</button>
+										<button id="btn_ob_data" type="button" class="layui-btn layui-btn-normal layui-btn-xs">数据</button>
+										<button id="btn_ob_delete" type="button" class="layui-btn layui-btn-danger layui-btn-xs">删除</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<!-- 图片加载弹层 -->
+		<div id="load_image_lay">
+			图片地址：
+			<input id="image_url" value="http://wgsx.oss-cn-shenzhen.aliyuncs.com/4/FdD6WPtjFD.jpeg" type="text" class="layui-input" style="width: 400px;">
+			<button id="btn_image_load" type="button" class="layui-btn layui-btn-normal">加载</button>
+		</div>
+	</body>
+	<script src="./piu/dist/piu.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./layer/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./demo.js" type="text/javascript" charset="utf-8"></script>
+</html>
